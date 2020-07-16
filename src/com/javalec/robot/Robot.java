@@ -1,6 +1,12 @@
 package com.javalec.robot;
 
+import com.javalec.robot.inter.*;
+
 public abstract class Robot {
+	
+	IFly fly;
+	IMisail misail;
+	IKnife knife;
 	
 	public Robot() {
 		// TODO Auto-generated constructor stub
@@ -16,12 +22,32 @@ public abstract class Robot {
 		System.out.println("달릴 수 있습니다.");
 	}
 	
-	public void shape() {
-		// TODO Auto-generated method stub
-		System.out.println("외형은 머리, 몸통, 팔, 다리가 있습니다.");
+	public abstract void shape();
+	
+	public void setFly(IFly fly) {
+		this.fly = fly;
+	}
+
+	public void setMisail(IMisail misail) {
+		this.misail = misail;
+	}
+
+	public void setKnife(IKnife knife) {
+		this.knife = knife;
 	}
 	
-	public abstract void actionFly();
-	public abstract void actionMisail();
-	public abstract void actionKnife();
+	public void actionFly() {
+		// TODO Auto-generated method stub
+		this.fly.fly();
+	}
+	
+	public void actionMisail() {
+		// TODO Auto-generated method stub
+		this.misail.misail();
+	}
+	
+	public void actionKnife() {
+		// TODO Auto-generated method stub
+		this.knife.knife();
+	}
 }

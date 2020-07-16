@@ -7,20 +7,8 @@ public class SuperRobot extends Robot {
 	}
 
 	@Override
-	public void actionFly() {
+	public void shape() {
 		// TODO Auto-generated method stub
-		System.out.println("날 수 있습니다.");
-	}
-
-	@Override
-	public void actionMisail() {
-		// TODO Auto-generated method stub
-		System.out.println("미사일 쏠 수 있습니다.");
-	}
-
-	@Override
-	public void actionKnife() {
-		// TODO Auto-generated method stub
-		System.out.println("레이저검을 가지고 있습니다.");
+		System.out.println("SuperRobot입니다. 외형은 머리, 몸, 팔, 다리가 있습니다.");
 	}
 }
